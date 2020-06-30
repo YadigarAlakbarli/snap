@@ -1,3 +1,20 @@
+# create and drop tables and sequences, loads import.sql
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+
+
+  # Oracle settings
+ datasource:
+   username: HR
+   password: 0
+   driver-class-name: oracle.jdbc.OracleDriver
+   url: jdbc:oracle:thin:@localhost:1521:orcl
+
+
 eureka:
   client:
     register-with-eureka: true
