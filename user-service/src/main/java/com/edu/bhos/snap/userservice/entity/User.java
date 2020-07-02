@@ -1,29 +1,48 @@
 package com.edu.bhos.snap.userservice.entity;
 import com.edu.bhos.snap.userservice.entity.abstracts.Base;
 import com.edu.bhos.snap.userservice.entity.abstracts.IEntity;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
+import java.util.Arrays;
 import java.util.List;
 
+@Data
 @Entity
 @Table(name="users")
+@ApiModel(value ="User Model Properties")
 public class User extends Base implements IEntity {
 
+    @ApiModelProperty(value ="User name must be min 3 characters and not null ")
+    @NotBlank(message = "Name is mandatory")
+    @Size(min = 2, max = 35, message = "Name must be 2-35 characters long.")
     @Column(nullable=false)
     private String firstName;
 
     @Column(nullable=false)
+    @NotBlank(message = "Last name is mandatory")
+    @Size(min = 2, max = 35, message = "Surname must be 2-35 characters long.")
+    @ApiModelProperty(value ="Last name must be min 3 characters and not null")
     private String lastName;
 
+    @ApiModelProperty(value ="Email must be valid email addres")
+    @Email(message = "Enter a valid email address.")
     @Column(nullable=false, unique=true)
     private String email;
 
+    @ApiModelProperty("Phone number of User optional")
     private String mobile;
 
     @Column(nullable=false)
     private String password;
 
+    @ApiModelProperty(value = "User Starte 0 or 1 ")
     boolean state=true;
 
     boolean active=true;
@@ -45,99 +64,21 @@ public class User extends Base implements IEntity {
             inverseJoinColumns={@JoinColumn(name="role_id", referencedColumnName="id")})*/
     private List<Role> roles;
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public boolean isState() {
-        return state;
-    }
-
-    public void setState(boolean state) {
-        this.state = state;
-    }
-
-    public boolean isActive() {
-        return active;
-    }
-
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
-    public String getInfo() {
-        return info;
-    }
-
-    public void setInfo(String info) {
-        this.info = info;
-    }
-
-    public byte[] getImg() {
-        return img;
-    }
-
-    public void setImg(byte[] img) {
-        this.img = img;
-    }
-
-    public LocalDateTime getRegisteredAt() {
-        return registeredAt;
-    }
-
-    public void setRegisteredAt(LocalDateTime registeredAt) {
-        this.registeredAt = registeredAt;
-    }
-
-    public LocalDateTime getLastLogin() {
-        return lastLogin;
-    }
-
-    public void setLastLogin(LocalDateTime lastLogin) {
-        this.lastLogin = lastLogin;
-    }
-
-    public List<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", password='" + password + '\'' +
+                ", state=" + state +
+                ", active=" + active +
+                ", info='" + info + '\'' +
+                ", img=" + Arrays.toString(img) +
+                ", registeredAt=" + registeredAt +
+                ", lastLogin=" + lastLogin +
+                ", roles=" + roles +
+                '}';
     }
 }

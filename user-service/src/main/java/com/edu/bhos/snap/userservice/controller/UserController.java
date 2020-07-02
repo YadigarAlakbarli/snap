@@ -6,9 +6,13 @@ import com.edu.bhos.snap.userservice.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.HashMap;
+import java.util.Map;
 
 @RefreshScope
 @RestController
@@ -28,14 +32,27 @@ public class UserController implements IUserController {
     }
 
     @Override
-    public User addUser(User user) {
-        return userService.addUser(user);
+    public ResponseEntity<User> addUser(User user) {
+        System.out.println(user);
+        return null; //ResponseEntity.ok(userService.addUser(user));
     }
 
     @Override
-    public User findUserById(Integer id) {
-        return userService.findUserById(id);
+    public ResponseEntity<User> findUserById(Integer id) {
+        return ResponseEntity.ok(userService.findUserById(id));
     }
-    
 
+    @GetMapping("getuser")
+    public User getUser(){
+        User user=new User();
+        user.setActive(true);
+        user.setEmail("yadigar.alakbarli@gmail.com");
+        user.setFirstName("Yadigar");
+        user.setLastName("Elekberli");
+        user.setImg(null);
+        user.setMobile("050 420 23 18");
+        user.setInfo("No Info");
+        user.setState(true);
+        return user;
+    }
 }

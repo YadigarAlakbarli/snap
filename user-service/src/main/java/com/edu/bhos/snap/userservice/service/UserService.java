@@ -17,6 +17,6 @@ public class UserService {
     }
 
     public User findUserById(Integer id){
-        return userRepository.findById(id).orElseThrow(() -> new UserNotFoundEx(id+" number id of User Not found "));
+        return userRepository.findById(id).orElseThrow(() -> new UserNotFoundEx("User not found with id "+id));
     }
 }
