@@ -42,7 +42,7 @@ public class User extends Base implements IEntity {
     @Column(nullable=false)
     private String password;
 
-    @ApiModelProperty(value = "User Starte 0 or 1 ")
+    @ApiModelProperty(value = "User State 0 or 1 ")
     boolean state=true;
 
     boolean active=true;

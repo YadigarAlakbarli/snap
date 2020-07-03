@@ -16,10 +16,6 @@ public interface IUserController {
     @GetMapping("/index")
     String index();
 
-    @GetMapping("/getdemo")
-    ResponseEntity<User> getDemoUser();
-    @GetMapping("/addemo")
-    ResponseEntity<User> addDemoUser(@Valid @RequestBody User user);
 
     @ApiOperation(value = "This method responsible for user add operation")
     @PostMapping("/add")
@@ -28,4 +24,10 @@ public interface IUserController {
     @ApiOperation(value = "This method find user by user id")
     @GetMapping("/findbyid/{id}")
     ResponseEntity<User> findUserById(@PathVariable Integer id);
+
+    @GetMapping("/getdemo")
+    ResponseEntity<User> getDemoUser();
+    @GetMapping("/addemo")
+    ResponseEntity<User> addDemoUser(@Valid @RequestBody User user);
+
 }
