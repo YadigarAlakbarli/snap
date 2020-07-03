@@ -11,7 +11,7 @@
 	<groupId>com.edu.bhos.snap</groupId>
 	<artifactId>postservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>postservice</name>
+	<name>post-service</name>
 	<description>Post Service for Snap Application</description>
 
 	<properties>
