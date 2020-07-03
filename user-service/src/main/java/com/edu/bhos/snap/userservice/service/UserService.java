@@ -6,6 +6,7 @@ import com.edu.bhos.snap.userservice.exception.UserNotFoundEx;
 import com.edu.bhos.snap.userservice.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UserService {
@@ -18,5 +19,13 @@ public class UserService {
 
     public User findUserById(Integer id){
         return userRepository.findById(id).orElseThrow(() -> new UserNotFoundEx("User not found with id "+id));
+    }
+
+    @Transactional
+    public User updateUser(User _user){
+        User u=findUserById(_user.getId());
+        //set operations will be here
+
+        return userRepository.save(u);
     }
 }

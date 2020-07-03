@@ -12,15 +12,20 @@ import javax.validation.Valid;
 
 
 public interface IUserController {
-    
+
     @GetMapping("/index")
-     String index();
+    String index();
 
-    @ApiOperation(value ="This method responsible for user add operation" )
+    @GetMapping("/getdemo")
+    ResponseEntity<User> getDemoUser();
+    @GetMapping("/addemo")
+    ResponseEntity<User> addDemoUser(@Valid @RequestBody User user);
+
+    @ApiOperation(value = "This method responsible for user add operation")
     @PostMapping("/add")
-    ResponseEntity<User>addUser(@Valid @RequestBody User user);
+    ResponseEntity<User> addUser(@Valid @RequestBody User user);
 
-    @ApiOperation(value ="This method find user by user id")
+    @ApiOperation(value = "This method find user by user id")
     @GetMapping("/findbyid/{id}")
     ResponseEntity<User> findUserById(@PathVariable Integer id);
 }
