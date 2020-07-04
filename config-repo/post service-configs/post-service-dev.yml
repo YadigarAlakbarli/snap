@@ -25,4 +25,8 @@ spring:
      show-sql: true
 
 
+  devtools:
+   restart:
+    enabled: true
+    
 message: This message came from Config Server

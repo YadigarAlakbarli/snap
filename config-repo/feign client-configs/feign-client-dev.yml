@@ -15,5 +15,10 @@ management:
 feign:
   hystrix:
     enabled: true
+    
+spring:
+ devtools:
+  restart:
+   enabled: true
 
 message: This message came from Config Server
