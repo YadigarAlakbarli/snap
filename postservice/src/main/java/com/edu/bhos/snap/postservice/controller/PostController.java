@@ -23,6 +23,7 @@ public class PostController implements IPostController {
      return message;
     }
 
+    
     @GetMapping("/demouser")
     public Object getDemoUser(){
         return feignUserService.getDemoUser();
