@@ -9,4 +9,7 @@ public interface FeignClientUserService {
 
     @GetMapping("/getdemo")
     Object getDemoUser();
+
+    @GetMapping("/index")
+     String index();
 }

@@ -24,8 +24,8 @@ public class PostController implements IPostController {
     }
 
     
-    @GetMapping("/demouser")
-    public Object getDemoUser(){
-        return feignUserService.getDemoUser();
+    @GetMapping("/userindex")
+    public String getDemoUser(){
+        return feignUserService.index();
     }
 }

@@ -27,6 +27,7 @@ public interface IUserController {
 
     @GetMapping("/getdemo")
     ResponseEntity<User> getDemoUser();
+
     @GetMapping("/addemo")
     ResponseEntity<User> addDemoUser(@Valid @RequestBody User user);
 

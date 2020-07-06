@@ -7,6 +7,11 @@ import org.springframework.stereotype.Component;
 public class UserServiceFalback implements FeignClientUserService {
     @Override
     public Object getDemoUser() {
-        return null;
+        return "Post-Serviccde fallback method called";
+    }
+
+    @Override
+    public String index() {
+        return "Post-Serviccde fallback method called";
     }
 }
