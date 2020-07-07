@@ -28,5 +28,9 @@ spring:
   devtools:
    restart:
     enabled: true
+
+logging:
+  file:
+    name: C:/Users/Yadigar/Desktop/snap/log.log
     
 message: This message came from Config Server
