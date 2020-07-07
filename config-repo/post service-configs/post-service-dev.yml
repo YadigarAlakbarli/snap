@@ -17,6 +17,16 @@ spring:
     username: HR
     password: 0
 
+  zipkin:
+    base-url: http://localhost:9411
+    enabled: true
+    sender.type: web
+
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1.0
+
 
   jpa:
     database-platform: org.hibernate.dialect.Oracle10gDialect
@@ -31,6 +41,6 @@ spring:
 
 logging:
   file:
-    name: C:/Users/Yadigar/Desktop/snap/log/log.log
+    name: C:/Users/Yadigar/Desktop/snap/log-2/log.log
 
 message: This message came from Config Server
