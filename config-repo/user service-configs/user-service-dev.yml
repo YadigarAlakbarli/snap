@@ -39,6 +39,6 @@ spring:
 
 logging:
   file:
-    name: C:/Users/Yadigar/Desktop/snap/log/log.log
+    name: C:/Users/Yadigar/Desktop/snap/log/user-service/log.log
 
 message: This message came from Config Server
