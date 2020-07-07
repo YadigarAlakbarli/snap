@@ -1,0 +1,133 @@
+2020-07-07 12:55:21.542  INFO [post-service,,,] 6768 --- [main] c.e.b.s.p.PostserviceApplication         : The following profiles are active: dev
+2020-07-07 12:55:23.072  INFO [post-service,,,] 6768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-07 12:55:23.172  INFO [post-service,,,] 6768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92ms. Found 2 JPA repository interfaces.
+2020-07-07 12:55:23.312  WARN [post-service,,,] 6768 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-07-07 12:55:23.682  INFO [post-service,,,] 6768 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e7affd0b-874f-3f97-b207-d290ac76b2b9
+2020-07-07 12:55:24.472  INFO [post-service,,,] 6768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7071 (http)
+2020-07-07 12:55:24.482  INFO [post-service,,,] 6768 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-07 12:55:24.482  INFO [post-service,,,] 6768 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-07 12:55:24.732  INFO [post-service,,,] 6768 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-07 12:55:24.732  INFO [post-service,,,] 6768 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3170 ms
+2020-07-07 12:55:24.902  WARN [post-service,,,] 6768 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-07 12:55:24.902  INFO [post-service,,,] 6768 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-07 12:55:24.922  INFO [post-service,,,] 6768 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@40ddf339
+2020-07-07 12:55:25.942  WARN [post-service,,,] 6768 --- [main] o.s.c.s.zipkin2.ZipkinAutoConfiguration  : Check result of the [org.springframework.cloud.sleuth.zipkin2.sender.RestTemplateSender@26feccf7] contains an error [CheckResult{ok=false, error=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:9411/api/v2/spans": Connect timed out; nested exception is java.net.SocketTimeoutException: Connect timed out}]
+2020-07-07 12:55:26.882  INFO [post-service,,,] 6768 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-07 12:55:26.972  INFO [post-service,,,] 6768 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-07 12:55:27.062  INFO [post-service,,,] 6768 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-07 12:55:27.262  INFO [post-service,,,] 6768 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-07 12:55:27.402  INFO [post-service,,,] 6768 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-07 12:55:27.492  WARN [post-service,,,] 6768 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-07 12:55:27.722  INFO [post-service,,,] 6768 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-07 12:55:27.742  INFO [post-service,,,] 6768 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-07-07 12:55:27.752  INFO [post-service,,,] 6768 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-07-07 12:55:28.092  INFO [post-service,,,] 6768 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-07 12:55:28.144  WARN [post-service,,,] 6768 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-07 12:55:28.144  INFO [post-service,,,] 6768 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-07 12:55:29.684  INFO [post-service,,,] 6768 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-07 12:55:29.694  INFO [post-service,,,] 6768 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-07 12:55:30.084  WARN [post-service,,,] 6768 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-07-07 12:55:30.524  INFO [post-service,,,] 6768 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-07-07 12:55:30.564  INFO [post-service,,,] 6768 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-07-07 12:55:30.764  INFO [post-service,,,] 6768 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-07-07 12:55:30.764  INFO [post-service,,,] 6768 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-07-07 12:55:30.914  INFO [post-service,,,] 6768 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-07-07 12:55:30.914  INFO [post-service,,,] 6768 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-07-07 12:55:31.104  INFO [post-service,,,] 6768 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-07-07 12:55:31.154  INFO [post-service,,,] 6768 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-07-07 12:55:31.154  INFO [post-service,,,] 6768 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-07-07 12:55:31.154  INFO [post-service,,,] 6768 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-07-07 12:55:31.154  INFO [post-service,,,] 6768 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-07-07 12:55:31.154  INFO [post-service,,,] 6768 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-07-07 12:55:31.164  INFO [post-service,,,] 6768 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-07-07 12:55:31.164  INFO [post-service,,,] 6768 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-07-07 12:55:31.274  INFO [post-service,,,] 6768 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-07-07 12:55:31.274  INFO [post-service,,,] 6768 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-07-07 12:55:31.274  INFO [post-service,,,] 6768 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-07 12:55:31.284  INFO [post-service,,,] 6768 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1594112131284 with initial instances count: 3
+2020-07-07 12:55:31.294  INFO [post-service,,,] 6768 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application POST-SERVICE with eureka with status UP
+2020-07-07 12:55:31.294  INFO [post-service,,,] 6768 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1594112131294, current=UP, previous=STARTING]
+2020-07-07 12:55:31.294  INFO [post-service,,,] 6768 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POST-SERVICE/Yadigar-PC:post-service:7071: registering service...
+2020-07-07 12:55:31.334  INFO [post-service,,,] 6768 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POST-SERVICE/Yadigar-PC:post-service:7071 - registration status: 204
+2020-07-07 12:55:31.384  INFO [post-service,,,] 6768 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7071 (http) with context path ''
+2020-07-07 12:55:31.384  INFO [post-service,,,] 6768 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 7071
+2020-07-07 12:55:31.444  INFO [post-service,,,] 6768 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-07 12:55:31.464  INFO [post-service,,,] 6768 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-07 12:55:31.504  INFO [post-service,,,] 6768 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-07 12:55:31.594  INFO [post-service,,,] 6768 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-07 12:55:31.944  INFO [post-service,,,] 6768 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-07 12:55:31.974  INFO [post-service,,,] 6768 --- [main] c.e.b.s.p.PostserviceApplication         : Started PostserviceApplication in 13.753 seconds (JVM running for 15.216)
+2020-07-07 12:55:32.344  INFO [post-service,,,] 6768 --- [RMI TCP Connection(2)-192.168.1.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-07 12:55:32.354  INFO [post-service,,,] 6768 --- [RMI TCP Connection(2)-192.168.1.5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-07 12:55:32.364  INFO [post-service,,,] 6768 --- [RMI TCP Connection(1)-192.168.1.5] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2020-07-07 12:55:32.384  INFO [post-service,,,] 6768 --- [RMI TCP Connection(2)-192.168.1.5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
+2020-07-07 12:55:33.314  INFO [post-service,,,] 6768 --- [RMI TCP Connection(1)-192.168.1.5] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=post-service, profiles=[dev], label=null, version=f8ae8911451ef2dffde4d80b46b2346fc5e37314, state=null
+2020-07-07 13:00:31.189  INFO [post-service,,,] 6768 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-07-07 13:02:54.509  INFO [post-service,,,] 8024 --- [main] c.e.b.s.p.PostserviceApplication         : The following profiles are active: dev
+2020-07-07 13:02:56.129  INFO [post-service,,,] 8024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-07-07 13:02:56.229  INFO [post-service,,,] 8024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91ms. Found 2 JPA repository interfaces.
+2020-07-07 13:02:56.389  WARN [post-service,,,] 8024 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-07-07 13:02:56.739  INFO [post-service,,,] 8024 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e7affd0b-874f-3f97-b207-d290ac76b2b9
+2020-07-07 13:02:57.529  INFO [post-service,,,] 8024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 7071 (http)
+2020-07-07 13:02:57.539  INFO [post-service,,,] 8024 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-07 13:02:57.539  INFO [post-service,,,] 8024 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.36]
+2020-07-07 13:02:57.859  INFO [post-service,,,] 8024 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-07 13:02:57.859  INFO [post-service,,,] 8024 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3330 ms
+2020-07-07 13:02:58.089  WARN [post-service,,,] 8024 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-07 13:02:58.089  INFO [post-service,,,] 8024 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-07 13:02:58.109  INFO [post-service,,,] 8024 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@521c67f0
+2020-07-07 13:02:59.429  INFO [post-service,,,] 8024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-07-07 13:02:59.509  INFO [post-service,,,] 8024 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-07 13:02:59.589  INFO [post-service,,,] 8024 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.17.Final
+2020-07-07 13:03:00.089  INFO [post-service,,,] 8024 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-07 13:03:00.249  INFO [post-service,,,] 8024 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-07-07 13:03:00.259  WARN [post-service,,,] 8024 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-07 13:03:00.469  INFO [post-service,,,] 8024 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-07-07 13:03:00.679  INFO [post-service,,,] 8024 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-07-07 13:03:00.739  WARN [post-service,,,] 8024 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-07-07 13:03:00.739  INFO [post-service,,,] 8024 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-07-07 13:03:00.749  INFO [post-service,,,] 8024 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-07-07 13:03:00.769  INFO [post-service,,,] 8024 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.Oracle10gDialect
+2020-07-07 13:03:02.611  INFO [post-service,,,] 8024 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-07 13:03:02.651  INFO [post-service,,,] 8024 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-07 13:03:03.141  WARN [post-service,,,] 8024 --- [main] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-07-07 13:03:03.693  INFO [post-service,,,] 8024 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-07-07 13:03:03.743  INFO [post-service,,,] 8024 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-07-07 13:03:03.933  INFO [post-service,,,] 8024 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-07-07 13:03:03.933  INFO [post-service,,,] 8024 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-07-07 13:03:04.093  INFO [post-service,,,] 8024 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-07-07 13:03:04.093  INFO [post-service,,,] 8024 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-07-07 13:03:04.363  INFO [post-service,,,] 8024 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-07-07 13:03:04.453  INFO [post-service,,,] 8024 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-07-07 13:03:04.453  INFO [post-service,,,] 8024 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-07-07 13:03:04.453  INFO [post-service,,,] 8024 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-07-07 13:03:04.453  INFO [post-service,,,] 8024 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-07-07 13:03:04.453  INFO [post-service,,,] 8024 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-07-07 13:03:04.453  INFO [post-service,,,] 8024 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-07-07 13:03:04.453  INFO [post-service,,,] 8024 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-07-07 13:03:04.583  INFO [post-service,,,] 8024 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-07-07 13:03:04.583  INFO [post-service,,,] 8024 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-07-07 13:03:04.583  INFO [post-service,,,] 8024 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-07-07 13:03:04.593  INFO [post-service,,,] 8024 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1594112584593 with initial instances count: 3
+2020-07-07 13:03:04.603  INFO [post-service,,,] 8024 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application POST-SERVICE with eureka with status UP
+2020-07-07 13:03:04.603  INFO [post-service,,,] 8024 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1594112584603, current=UP, previous=STARTING]
+2020-07-07 13:03:04.603  INFO [post-service,,,] 8024 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POST-SERVICE/Yadigar-PC:post-service:7071: registering service...
+2020-07-07 13:03:04.673  INFO [post-service,,,] 8024 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POST-SERVICE/Yadigar-PC:post-service:7071 - registration status: 204
+2020-07-07 13:03:04.683  INFO [post-service,,,] 8024 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 7071 (http) with context path ''
+2020-07-07 13:03:04.683  INFO [post-service,,,] 8024 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 7071
+2020-07-07 13:03:04.743  INFO [post-service,,,] 8024 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-07 13:03:04.763  INFO [post-service,,,] 8024 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-07 13:03:04.803  INFO [post-service,,,] 8024 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-07 13:03:04.903  INFO [post-service,,,] 8024 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-07-07 13:03:05.273  INFO [post-service,,,] 8024 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-07-07 13:03:05.303  INFO [post-service,,,] 8024 --- [main] c.e.b.s.p.PostserviceApplication         : Started PostserviceApplication in 15.331 seconds (JVM running for 16.702)
+2020-07-07 13:03:05.943  INFO [post-service,,,] 8024 --- [RMI TCP Connection(3)-192.168.1.5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-07 13:03:05.943  INFO [post-service,,,] 8024 --- [RMI TCP Connection(3)-192.168.1.5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-07 13:03:05.973  INFO [post-service,,,] 8024 --- [RMI TCP Connection(4)-192.168.1.5] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://localhost:8888
+2020-07-07 13:03:05.983  INFO [post-service,,,] 8024 --- [RMI TCP Connection(3)-192.168.1.5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 40 ms
+2020-07-07 13:03:07.103  INFO [post-service,,,] 8024 --- [RMI TCP Connection(4)-192.168.1.5] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=post-service, profiles=[dev], label=null, version=f8ae8911451ef2dffde4d80b46b2346fc5e37314, state=null
+2020-07-07 13:03:54.463  INFO [post-service,e1081bec6203990d,e1081bec6203990d,true] 8024 --- [http-nio-7071-exec-1] c.e.b.s.p.controller.PostController      : Post Service index method started
+2020-07-07 13:03:57.663  INFO [post-service,73acab29a7a76310,73acab29a7a76310,true] 8024 --- [http-nio-7071-exec-2] c.e.b.s.p.controller.PostController      : Post Service index method started
+2020-07-07 13:03:57.853  INFO [post-service,1111021520c79ea8,1111021520c79ea8,true] 8024 --- [http-nio-7071-exec-3] c.e.b.s.p.controller.PostController      : Post Service index method started
+2020-07-07 13:05:04.238  INFO [post-service,a5cd232b543409fc,a5cd232b543409fc,true] 8024 --- [http-nio-7071-exec-5] c.e.b.s.p.controller.PostController      : Post Service index method started
+2020-07-07 13:05:12.752  INFO [post-service,8cee935b0167c449,8cee935b0167c449,true] 8024 --- [http-nio-7071-exec-7] c.e.b.s.p.controller.PostController      : Post Service index method started
