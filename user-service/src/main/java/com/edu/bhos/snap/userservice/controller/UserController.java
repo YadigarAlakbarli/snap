@@ -4,7 +4,6 @@ import com.edu.bhos.snap.userservice.controller.abstracts.IUserController;
 import com.edu.bhos.snap.userservice.entity.Role;
 import com.edu.bhos.snap.userservice.entity.User;
 import com.edu.bhos.snap.userservice.service.UserService;
-import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -16,8 +15,6 @@ import org.apache.logging.log4j.Logger;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 @RefreshScope
 @RestController
 @RequestMapping("/api/v1/user-service")

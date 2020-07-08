@@ -1,5 +1,2 @@
-[2020-07-08 13:24:56:646] [c4906fd3c071f983,c4906fd3c071f983,,true] INFO  [Sample][http-nio-8081-exec-1|usercontroller] 55 getDemoUser getDemoUser Method started
-[2020-07-08 13:24:57:366] [63c5e8cd9d839f40,63c5e8cd9d839f40,,true] INFO  [Sample][http-nio-8081-exec-2|usercontroller] 55 getDemoUser getDemoUser Method started
-[2020-07-08 13:24:58:076] [b0202939599ae47e,b0202939599ae47e,,true] INFO  [Sample][http-nio-8081-exec-3|usercontroller] 55 getDemoUser getDemoUser Method started
-[2020-07-08 13:24:58:686] [513495fa8c84dfb8,513495fa8c84dfb8,,true] INFO  [Sample][http-nio-8081-exec-4|usercontroller] 55 getDemoUser getDemoUser Method started
-[2020-07-08 13:24:59:306] [ec88b38c50cd2988,ec88b38c50cd2988,,true] INFO  [Sample][http-nio-8081-exec-5|usercontroller] 55 getDemoUser getDemoUser Method started
+[2020-07-08 13:49:42:224] [48b35a88d60b63bf,48b35a88d60b63bf,,true] INFO  [Sample][http-nio-8081-exec-2|usercontroller] 52 getDemoUser getDemoUser Method started
+[2020-07-08 13:49:42:224] [31bce0b2c2a308f0,31bce0b2c2a308f0,,true] INFO  [Sample][http-nio-8081-exec-5|usercontroller] 52 getDemoUser getDemoUser Method started
