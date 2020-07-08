@@ -4,8 +4,7 @@ import com.edu.bhos.snap.userservice.controller.abstracts.IUserController;
 import com.edu.bhos.snap.userservice.entity.Role;
 import com.edu.bhos.snap.userservice.entity.User;
 import com.edu.bhos.snap.userservice.service.UserService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -20,9 +19,9 @@ import java.util.List;
 @RefreshScope
 @RestController
 @RequestMapping("/api/v1/user-service")
+@Log4j2
 public class UserController implements IUserController {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     UserService userService;
@@ -51,7 +50,7 @@ public class UserController implements IUserController {
 
     @Override
     public ResponseEntity<User> getDemoUser() {
-        LOGGER.info("getDemoUser Method started");
+        log.info("getDemoUser Method started");
         User user = new User();
         Role role = new Role();
         List<Role> roles = new ArrayList<>();
@@ -68,7 +67,7 @@ public class UserController implements IUserController {
         user.setState(true);
         user.setPassword(passwordEncoder.encode("yadigar"));
         user.setRoles(roles);
-        LOGGER.info("getDemoUser Method finished");
+        log.info("getDemoUser Method finished");
         return ResponseEntity.ok(user);
     }
 
