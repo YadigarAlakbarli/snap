@@ -1,63 +1,44 @@
 package com.edu.bhos.snap.userservice.entity;
-import com.edu.bhos.snap.userservice.entity.abstracts.Base;
+
 import com.edu.bhos.snap.userservice.entity.abstracts.IEntity;
+import com.edu.bhos.snap.userservice.entity.abstracts.Person;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-
 import javax.persistence.*;
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 import java.time.LocalDateTime;
-import java.util.Arrays;
 import java.util.List;
 
 @Data
 @Entity
-@Table(name="users")
-@ApiModel(value ="User Model Properties")
-public class User extends Base implements IEntity {
+@Table(name = "users")
+@ApiModel(value = "User Model Properties")
+public class User extends Person implements IEntity {
 
-    @ApiModelProperty(value ="User name must be min 3 characters and not null ")
-    @NotBlank(message = "Name is mandatory")
-    @Size(min = 2, max = 35, message = "Name must be 2-35 characters long.")
-    @Column(nullable=false)
-    private String firstName;
 
-    @Column(nullable=false)
-    @NotBlank(message = "Last name is mandatory")
-    @Size(min = 2, max = 35, message = "Surname must be 2-35 characters long.")
-    @ApiModelProperty(value ="Last name must be min 3 characters and not null")
-    private String lastName;
-
-    @ApiModelProperty(value ="Email must be valid email addres")
-    @Email(message = "Enter a valid email address.")
-    @Column(nullable=false, unique=true)
+    @ApiModelProperty(value = "Email must be valid email addres")
+    @Email(message = "input a valid email address.")
+    @Column(nullable = false, unique = true)
     private String email;
 
-    @ApiModelProperty("Phone number of User optional")
-    private String mobile;
 
-    @Column(nullable=false)
+    @Column(nullable = false)
     private String password;
 
     @ApiModelProperty(value = "User State 0 or 1 ")
-    boolean state=true;
+    boolean state = true;
 
-    boolean active=true;
+    boolean active = true;
 
     private String info;
 
-    @Lob
-    @Basic(fetch = FetchType.LAZY)
-    private byte[] img;
 
-    private LocalDateTime registeredAt=LocalDateTime.now();
+    private LocalDateTime registeredAt = LocalDateTime.now();
 
     private LocalDateTime lastLogin;
 
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.PERSIST)
     /*@JoinTable(
             name="users_roles",
             joinColumns={@JoinColumn(name="user_id", referencedColumnName="id")},
@@ -67,15 +48,14 @@ public class User extends Base implements IEntity {
     @Override
     public String toString() {
         return "User{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
+                "firstName='" + getFirstName() + '\'' +
+                ", lastName='" + getLastName() + '\'' +
                 ", email='" + email + '\'' +
-                ", mobile='" + mobile + '\'' +
+                ", mobile='" + getMobile() + '\'' +
                 ", password='" + password + '\'' +
                 ", state=" + state +
                 ", active=" + active +
                 ", info='" + info + '\'' +
-                ", img=" + Arrays.toString(img) +
                 ", registeredAt=" + registeredAt +
                 ", lastLogin=" + lastLogin +
                 ", roles=" + roles +

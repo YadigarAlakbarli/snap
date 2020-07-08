@@ -9,6 +9,7 @@ import springfox.documentation.service.Contact;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 import static springfox.documentation.builders.PathSelectors.regex;
 
 @Configuration
@@ -18,9 +19,9 @@ public class Swagger2Configs {
     @Bean
     public Docket productApi() {
         return new Docket(DocumentationType.SWAGGER_2)
-                .select()       
+                .select()
                 .apis(RequestHandlerSelectors.basePackage("com.edu.bhos.snap.userservice.controller"))
-                .paths(regex("/api/v1/user-service.*"))
+                .paths(regex("/api/v1/.*-service.*"))
                 .build()
                 .apiInfo(apiInfo());
 
@@ -33,7 +34,7 @@ public class Swagger2Configs {
                 .version("1.0.0")
                 .license("Apache License Version 2.0")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
-                .contact(new Contact("Yadigar Elekberli","localhost","yadigar.alakbarli@gmail.com"))
+                .contact(new Contact("Yadigar Elekberli", "http://localhost:8081/api/v1/user-service/index", "yadigar.alakbarli@gmail.com"))
                 .build();
     }
 }

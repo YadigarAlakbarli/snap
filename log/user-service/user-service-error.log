@@ -1,2 +1,0 @@
-[2020-07-08 13:49:45:474] [48b35a88d60b63bf,48b35a88d60b63bf,,true] ERROR [Sample][http-nio-8081-exec-2|usercontroller] 69 getDemoUser getDemoUser Method finished
-[2020-07-08 13:49:45:484] [31bce0b2c2a308f0,31bce0b2c2a308f0,,true] ERROR [Sample][http-nio-8081-exec-5|usercontroller] 69 getDemoUser getDemoUser Method finished

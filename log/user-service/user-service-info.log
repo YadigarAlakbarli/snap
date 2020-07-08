@@ -1,2 +1,2 @@
-[2020-07-08 13:49:42:224] [48b35a88d60b63bf,48b35a88d60b63bf,,true] INFO  [Sample][http-nio-8081-exec-2|usercontroller] 52 getDemoUser getDemoUser Method started
-[2020-07-08 13:49:42:224] [31bce0b2c2a308f0,31bce0b2c2a308f0,,true] INFO  [Sample][http-nio-8081-exec-5|usercontroller] 52 getDemoUser getDemoUser Method started
+[2020-07-08 18:26:32:488] [0726ac6e96a7f35f,0726ac6e96a7f35f,,true] INFO  [Sample][http-nio-8081-exec-5|rollservice] 23 saveRole new roll added
+[2020-07-08 18:28:17:824] [d5d548bef1a2bf8e,d5d548bef1a2bf8e,,true] INFO  [Sample][http-nio-8081-exec-2|rollservice] 23 saveRole new roll added

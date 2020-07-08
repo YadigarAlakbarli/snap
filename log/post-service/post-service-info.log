@@ -1,9 +1,0 @@
-[2020-07-08 13:48:11:538] [2059470ced435b77,2059470ced435b77,,true] INFO  [Sample][http-nio-7071-exec-1|postcontroller] 25 index Post Service index method started
-[2020-07-08 13:48:14:308] [b5bb77649f142d9c,b5bb77649f142d9c,,true] INFO  [Sample][http-nio-7071-exec-2|postcontroller] 25 index Post Service index method started
-[2020-07-08 13:48:14:638] [fe13ab8a50cc8e67,fe13ab8a50cc8e67,,true] INFO  [Sample][http-nio-7071-exec-3|postcontroller] 25 index Post Service index method started
-[2020-07-08 13:48:14:818] [0c8ca4b201898a33,0c8ca4b201898a33,,true] INFO  [Sample][http-nio-7071-exec-4|postcontroller] 25 index Post Service index method started
-[2020-07-08 13:49:36:382] [46908da8f11b4025,46908da8f11b4025,,true] INFO  [Sample][http-nio-7071-exec-5|postcontroller] 25 index Post Service index method started
-[2020-07-08 13:49:36:762] [4bc4c3f58123bbf7,4bc4c3f58123bbf7,,true] INFO  [Sample][http-nio-7071-exec-9|postcontroller] 25 index Post Service index method started
-[2020-07-08 13:49:36:942] [1d6da768116acf21,1d6da768116acf21,,true] INFO  [Sample][http-nio-7071-exec-6|postcontroller] 25 index Post Service index method started
-[2020-07-08 13:49:37:142] [c746d7946f844139,c746d7946f844139,,true] INFO  [Sample][http-nio-7071-exec-10|postcontroller] 25 index Post Service index method started
-[2020-07-08 13:49:37:312] [d8c0acc292a87c71,d8c0acc292a87c71,,true] INFO  [Sample][http-nio-7071-exec-7|postcontroller] 25 index Post Service index method started

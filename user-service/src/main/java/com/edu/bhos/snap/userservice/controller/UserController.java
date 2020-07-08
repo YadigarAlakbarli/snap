@@ -12,16 +12,19 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.web.multipart.MultipartFile;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
+
 @RefreshScope
 @RestController
 @RequestMapping("/api/v1/user-service")
-
 public class UserController implements IUserController {
 
     private static final Logger LOGGER = LogManager.getLogger("usercontroller");
+
     @Autowired
     UserService userService;
     @Autowired
@@ -30,22 +33,48 @@ public class UserController implements IUserController {
     @Value("${message}")
     private String message;
 
+    @Override
+    public ResponseEntity<User> addUser(User _user) {
+       User user=userService.addUser(_user);
+       LOGGER.info("User add Succesfully");
+        return ResponseEntity.ok(user);
+    }
+    @Override
+    public ResponseEntity<User> findUserById(Integer id) {
+        User user= userService.findUserById(id);
+        LOGGER.info("Find User with id="+id);
+        return ResponseEntity.ok(user);
+    }
+
+    @Override
+    public ResponseEntity<String> deleteUserById(Integer id) {
+      userService.deleteUserById(id);
+      LOGGER.info("Deleted User which id="+id);
+
+      return ResponseEntity.ok("User Deleted Sucefully");
+    }
+
+    @Override
+    public ResponseEntity<String> updatePhoto(MultipartFile img, HttpSession session) {
+      Integer id= (Integer) session.getAttribute("user_id");
+      boolean response=userService.updatePhoto(img,id);
+
+        return response?ResponseEntity.ok("User photo update succesfully"):ResponseEntity.ok("Oops");
+    }
+
+    @Override
+    public ResponseEntity<List<User>> getAll() {
+        return ResponseEntity.ok(userService.getAll());
+    }
 
     @Override
     public String index() {
+
+            LOGGER.error("Xeta Bas verdi");
+
         return message;
     }
 
-    @Override
-    public ResponseEntity<User> addUser(User user) {
-
-        return ResponseEntity.ok(userService.addUser(user));
-    }
-
-    @Override
-    public ResponseEntity<User> findUserById(Integer id) {
-        return ResponseEntity.ok(userService.findUserById(id));
-    }
 
     @Override
     public ResponseEntity<User> getDemoUser() {

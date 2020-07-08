@@ -69,6 +69,16 @@
             <AppenderRef ref="Console" />
         </logger>
 
+        <logger name="rollservice" level="trace" additivity="false">
+            <AppenderRef ref="ERROR" level="error"/>
+            <AppenderRef ref="INFO" level="info"/>
+        </logger>
+
+        <logger name="userservice" level="trace" additivity="false">
+            <AppenderRef ref="ERROR" level="error"/>
+            <AppenderRef ref="INFO" level="info"/>
+        </logger>
+
         <Root level="info">
             <AppenderRef ref="Console" />
         </Root>
