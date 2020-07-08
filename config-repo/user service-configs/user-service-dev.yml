@@ -17,15 +17,9 @@ spring:
     username: HR
     password: 0
 
-  zipkin:
-    base-url: http://localhost:9411
-    enabled: false
-    sender.type: web
+  
 
-  sleuth:
-    enabled: false
-    sampler:
-      probability: 1.0
+
 
   jpa:
     database-platform: org.hibernate.dialect.Oracle10gDialect
@@ -37,8 +31,8 @@ spring:
     restart:
       enabled: true
 
-logging:
-  file:
-    name: C:/Users/Yadigar/Desktop/snap/log/user-service/log.log
+#logging:
+  #file:
+    #name: C:/Users/Yadigar/Desktop/snap/log/user-service/log.log
 
 message: This message came from Config Server

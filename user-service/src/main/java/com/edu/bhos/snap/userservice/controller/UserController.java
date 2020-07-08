@@ -11,18 +11,20 @@ import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 @RefreshScope
 @RestController
 @RequestMapping("/api/v1/user-service")
-@Log4j2
+
 public class UserController implements IUserController {
 
-
+    private static final Logger LOGGER = LogManager.getLogger(UserController.class);
     @Autowired
     UserService userService;
     @Autowired
@@ -50,7 +52,7 @@ public class UserController implements IUserController {
 
     @Override
     public ResponseEntity<User> getDemoUser() {
-        log.info("getDemoUser Method started");
+        LOGGER.info("getDemoUser Method started");
         User user = new User();
         Role role = new Role();
         List<Role> roles = new ArrayList<>();
@@ -67,7 +69,7 @@ public class UserController implements IUserController {
         user.setState(true);
         user.setPassword(passwordEncoder.encode("yadigar"));
         user.setRoles(roles);
-        log.info("getDemoUser Method finished");
+        LOGGER.error("getDemoUser Method finished");
         return ResponseEntity.ok(user);
     }
 

@@ -3,7 +3,7 @@
 
     <Properties>
         <Property name="log-path">C:/Users/Yadigar/Desktop/snap/log</Property>
-        <Property name="project-name">user-service</Property>
+        <Property name="project-name">user-service-2</Property>
         <Property name="log-pattern">%d{ISO8601} %-5p [Sample][%t|%c{1}] %L %M %m\n</Property>
         <Property name="rollover-strategy-max">10</Property>
         <Property name="rolling-size-based">2 kb</Property>
@@ -47,15 +47,15 @@
                 <SizeBasedTriggeringPolicy size="${rolling-size-based}"/>
             </Policies>
             <DefaultRolloverStrategy max="${rollover-strategy-max}"/>
-            <Filters>
-                <!-- Now deny warn, error and fatal messages -->
+<!--            <Filters>
+                &lt;!&ndash; Now deny warn, error and fatal messages &ndash;&gt;
                 <ThresholdFilter level="warn" onMatch="DENY" onMismatch="NEUTRAL"/>
                 <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
                 <ThresholdFilter level="fatal" onMatch="DENY" onMismatch="NEUTRAL"/>
 
-                <!-- This filter accepts info, warn, error, fatal and denies debug/trace -->
+                &lt;!&ndash; This filter accepts info, warn, error, fatal and denies debug/trace &ndash;&gt;
                 <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
-            </Filters>
+            </Filters>-->
         </RollingFile>
     </appenders>
 
