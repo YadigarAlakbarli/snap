@@ -39,8 +39,5 @@ spring:
    restart:
     enabled: true
 
-logging:
-  file:
-    name: C:/Users/Yadigar/Desktop/snap/log/post-service/log.log
 
 message: This message came from Config Server
