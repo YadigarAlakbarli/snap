@@ -24,7 +24,7 @@ import org.apache.logging.log4j.Logger;
 
 public class UserController implements IUserController {
 
-    private static final Logger LOGGER = LogManager.getLogger(UserController.class);
+    private static final Logger LOGGER = LogManager.getLogger("usercontroller");
     @Autowired
     UserService userService;
     @Autowired

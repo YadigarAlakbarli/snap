@@ -23,7 +23,7 @@ spring:
     sender.type: web
 
   sleuth:
-    enabled: false
+    enabled: true
     sampler:
       probability: 1.0
 
@@ -37,8 +37,6 @@ spring:
     restart:
       enabled: true
 
-logging:
-  file:
-    name: C:/Users/Yadigar/Desktop/snap/log/user-service/log.log
+
 
 message: This message came from Config Server
