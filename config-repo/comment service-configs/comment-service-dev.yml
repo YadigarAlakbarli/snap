@@ -1,0 +1,41 @@
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: "http://localhost:8761/eureka"
+
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    url: "jdbc:oracle:thin:@localhost:1521:orcl"
+    username: HR
+    password: 0
+
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+  zipkin:
+    base-url: http://localhost:9411
+    enabled: true
+    sender.type: web
+
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1.0
+
+  devtools:
+    restart:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+message: This message came from Config Server

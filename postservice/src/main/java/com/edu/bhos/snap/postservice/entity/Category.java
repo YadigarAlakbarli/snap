@@ -4,6 +4,7 @@ import com.edu.bhos.snap.postservice.entity.abstracts.Base;
 import com.edu.bhos.snap.postservice.entity.abstracts.IEntity;
 import lombok.Data;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotBlank;
@@ -20,6 +21,6 @@ public class Category extends Base implements IEntity {
     private LocalDateTime createAt=LocalDateTime.now();
     private  LocalDateTime updateAt;
 
-    @ManyToMany(mappedBy ="categories")
+    @ManyToMany(mappedBy ="categories",cascade = CascadeType.REMOVE)
     private List<Post> posts;
 }

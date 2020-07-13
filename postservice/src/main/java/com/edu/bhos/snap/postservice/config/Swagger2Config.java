@@ -21,7 +21,7 @@ public class Swagger2Config {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.edu.bhos.snap.postservice.controller"))
-                .paths(regex("/api/v1/post-service.*"))
+                .paths(regex("/api/v1/.*-service.*"))
                 .build()
                 .apiInfo(apiInfo());
 
@@ -34,7 +34,7 @@ public class Swagger2Config {
                 .version("1.0.0")
                 .license("Apache License Version 2.0")
                 .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
-                .contact(new Contact("Yadigar Elekberli","localhost","yadigar.alakbarli@gmail.com"))
+                .contact(new Contact("Yadigar Elekberli", "http://localhost:7071/api/v1/post-service/index", "yadigar.alakbarli@gmail.com"))
                 .build();
     }
 }

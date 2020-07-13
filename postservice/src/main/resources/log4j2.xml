@@ -10,7 +10,7 @@
         <Property name="SPRING_BOOT_CONSOLE_LOG_PATTERN">%clr{%d{${LOG_DATEFORMAT_PATTERN}}}{faint} [%X{X-B3-TraceId},%X{X-B3-SpanId},%X{X-B3-ParentSpanId},%X{X-Span-Export}] %clr{${LOG_LEVEL_PATTERN}} %clr{%pid}{magenta} %clr{---}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n${sys:LOG_EXCEPTION_CONVERSION_WORD}</Property>
         <Property name="LOG_EXCEPTION_CONVERSION_WORD">%xwEx</Property>
         <Property name="LOG_LEVEL_PATTERN">%5p</Property>
-        <Property name="LOG_DATEFORMAT_PATTERN">yyyy-MM-dd HH:mm:ss.SSS</Property>
+        <Property name="LOG_DATEFORMAT_PATTERN">yyyy-MM-dd HH:mm:ss</Property>
     </Properties>
 
     <appenders>
@@ -67,6 +67,16 @@
             <AppenderRef ref="ERROR" level="error"/>
             <AppenderRef ref="INFO" level="info"/>
             <AppenderRef ref="Console" />
+        </logger>
+
+        <logger name="categoryservice" level="trace" additivity="false">
+            <AppenderRef ref="ERROR" level="error"/>
+            <AppenderRef ref="INFO" level="info"/>
+        </logger>
+
+        <logger name="postservice" level="trace" additivity="false">
+            <AppenderRef ref="ERROR" level="error"/>
+            <AppenderRef ref="INFO" level="info"/>
         </logger>
 
         <Root level="info">
