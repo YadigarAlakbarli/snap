@@ -10,10 +10,10 @@ import javax.validation.constraints.Email;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@ApiModel(value = "User Model Properties")
 @Data
 @Entity
 @Table(name = "users")
-@ApiModel(value = "User Model Properties")
 public class User extends Person implements IEntity {
 
 

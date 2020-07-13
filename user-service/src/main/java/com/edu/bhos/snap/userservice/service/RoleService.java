@@ -2,7 +2,7 @@ package com.edu.bhos.snap.userservice.service;
 
 import com.edu.bhos.snap.userservice.entity.Role;
 import com.edu.bhos.snap.userservice.exception.RoleNotFoundException;
-import com.edu.bhos.snap.userservice.repo.RoleRepository;
+import com.edu.bhos.snap.userservice.repository.RoleRepo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 public class RoleService {
     @Autowired
-    RoleRepository roleRepository;
+    RoleRepo roleRepository;
 
     private static final Logger LOGGER= LogManager.getLogger("rollservice");
 

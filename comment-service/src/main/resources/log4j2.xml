@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF">
+
+    <Properties>
+        <Property name="log-path">C:/Users/Yadigar/Desktop/snap/log</Property>
+        <Property name="project-name">comment-service</Property>
+        <Property name="log-pattern">[%d{yyy-MM-dd HH:mm:ss:SSS}] [%X{X-B3-TraceId},%X{X-B3-SpanId},%X{X-B3-ParentSpanId},%X{X-Span-Export}] %-5p [Sample][%t|%c{1}] %L %M %m\n</Property>
+        <Property name="rollover-strategy-max">10</Property>
+        <Property name="rolling-size-based">2 kb</Property>
+        <Property name="SPRING_BOOT_CONSOLE_LOG_PATTERN">%clr{%d{${LOG_DATEFORMAT_PATTERN}}}{faint} [%X{X-B3-TraceId},%X{X-B3-SpanId},%X{X-B3-ParentSpanId},%X{X-Span-Export}] %clr{${LOG_LEVEL_PATTERN}} %clr{%pid}{magenta} %clr{---}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n${sys:LOG_EXCEPTION_CONVERSION_WORD}</Property>
+        <Property name="LOG_EXCEPTION_CONVERSION_WORD">%xwEx</Property>
+        <Property name="LOG_LEVEL_PATTERN">%5p</Property>
+        <Property name="LOG_DATEFORMAT_PATTERN">yyyy-MM-dd HH:mm:ss.SSS</Property>
+    </Properties>
+
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${sys:SPRING_BOOT_CONSOLE_LOG_PATTERN}" />
+        </Console>
+
+        <RollingFile name="DEBUG" fileName="${log-path}/${project-name}/${project-name}-debug.log"
+                     filePattern="${log-path}/${project-name}/${project-name}-debug-%d-%i.log.zip">
+            <PatternLayout>
+                <pattern>${log-pattern}</pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="${rolling-size-based}"/>
+            </Policies>
+            <DefaultRolloverStrategy max="${rollover-strategy-max}"/>
+        </RollingFile>
+
+        <RollingFile name="ERROR" fileName="${log-path}/${project-name}/${project-name}-error.log"
+                     filePattern="${log-path}/${project-name}/${project-name}-error-%d-%i.log.zip">
+            <PatternLayout>
+                <pattern>${log-pattern}</pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="${rolling-size-based}"/>
+            </Policies>
+            <DefaultRolloverStrategy max="${rollover-strategy-max}"/>
+        </RollingFile>
+
+        <RollingFile name="INFO" fileName="${log-path}/${project-name}/${project-name}-info.log"
+                     filePattern="${log-path}/${project-name}/${project-name}-info-%d-%i.log.zip">
+            <PatternLayout>
+                <pattern>${log-pattern}</pattern>
+            </PatternLayout>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="${rolling-size-based}"/>
+            </Policies>
+            <DefaultRolloverStrategy max="${rollover-strategy-max}"/>
+            <Filters>
+                <!-- Now deny warn, error and fatal messages -->
+                <ThresholdFilter level="warn"  onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="error" onMatch="DENY" onMismatch="NEUTRAL"/>
+                <ThresholdFilter level="fatal" onMatch="DENY" onMismatch="NEUTRAL"/>
+
+                <!-- This filter accepts info, warn, error, fatal and denies debug/trace -->
+                <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+        </RollingFile>
+    </appenders>
+
+
+    <Loggers>
+        <logger name="commentcontroller" level="trace" additivity="false">
+            <AppenderRef ref="ERROR" level="error"/>
+            <AppenderRef ref="INFO" level="info"/>
+            <AppenderRef ref="Console" />
+        </logger>
+
+        <logger name="commentservice" level="trace" additivity="false">
+            <AppenderRef ref="ERROR" level="error"/>
+            <AppenderRef ref="INFO" level="info"/>
+        </logger>
+
+
+
+        <Root level="info">
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+
+</configuration>

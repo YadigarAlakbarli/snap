@@ -1,6 +1,7 @@
 package com.edu.bhos.snap.userservice.controller.abstracts;
 
 import com.edu.bhos.snap.userservice.entity.User;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.List;
 
+@Api(value = "All User operation in this Controller")
 public interface IUserController {
 
     @GetMapping("/index")

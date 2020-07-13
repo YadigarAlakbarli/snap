@@ -3,7 +3,7 @@ package com.edu.bhos.snap.userservice.service;
 
 import com.edu.bhos.snap.userservice.entity.User;
 import com.edu.bhos.snap.userservice.exception.UserNotFoundEx;
-import com.edu.bhos.snap.userservice.repo.UserRepository;
+import com.edu.bhos.snap.userservice.repository.UserRepo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class UserService {
     @Autowired
-    UserRepository userRepository;
+    UserRepo userRepository;
 
     private static final Logger LOGGER= LogManager.getLogger("userservice");
 
